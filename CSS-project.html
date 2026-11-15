@@ -1,65 +1,306 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" contact="width=device-width" intial-scale="0">
-        <title>The Sunday Journal</title>
-        <style> 
-            .star{
-                color: white;
-            }
-            .top-most{
-                height:25px;
-                border:1px solid green;
-                background-color:darkslategray;
-                color:white;
-                margin-top:-10px;
-                margin-left: -10px;
-                margin-right:-10px;
-                text-align:center;
-                font-size: small;
-            }
-            .the-sunday{
-               display:inline-block; 
-               font-family:'serif',sans-serif monospace ;
-               font-size: 27px;
-               font-weight: bold;
-               color:black;
-               margin-left:5%;
-            
-            }
-            .three{
-                color:orange;
-                
-            }
-           
-            .nav{
-                display:inline-block;
-                font-size:15px;
-                margin-left:5px;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sun Journal</title>
 
-            }
-            .nav.home{
-                
-                margin-left:950px;
-            }
-           
-           
-        </style>
-    </head>
-    <body>
-        <p class="top-most">A LITTLE INSPIRATION FOR EVERYDAY <span class="star">&#9733</span></p>
-        <div class="container">
-           <div class="the-sunday">the sunday<span class="three">.</span></div>
-           <div class="nav home"><a href="Home">Home</a></div>
-           <div class="nav 2"><a href="">Journal </a></div>
-           <div class="nav 3"><a href="">About</a></div>
-           <div class="nav 4"><a href="">Subscribe</a></div>
-        </div>
-        <hr>
-        <p style="text-align:center; font-size:10px; ">STORIES WORTH SLOWING DOWN FOR</p>
-        <h1 style="text-align:center; line-height=100px;">The Sunday Journal</h1>
-        <p style="text-align:center;">A thoughtful collection of stories about life,creativity,and everything in between.</p>
+    <style>
+         #star{
+            color: white;
+        }
+        .top_most{
+            height: 25px;
+            background-color:#0D3526;
+            color: white;
+            font-size: small;
+            line-height: 25px;
+            text-align: center;
+            margin-top: -10px;
+            margin-left: -10px;
+            margin-right: -10px;
+        }
+        .container-1{
+            height: 50px;
+            display: flex;
+            
+        }
+        .theSunday{
+            font-size: 27px;
+            font-weight: bold;
+            font-family: 'serif',sans-serif monospace;
+            color: black;
+            margin-left: 10%;
+            display: inline-block;
+            line-height: 50px;
+        }
+        .theSunday span{
+            color:coral;
+        }
+        .nav{
+            font-size: 15px;
+            font-family: 'serif',sans-serif monospace;
+            color: black;
+            margin-left: 50px;
+            display: inline-block;
+        }
+        .nav a{
+            text-decoration: none;
+            color: black;
+            line-height: 50px;
+        }
+        .nav a:hover{
+            color: coral;
+        }
+        .nav.home{
+            margin-left: 55%;
+        }
+        .imgpart{
+            position: relative;
+            width: 80%;
+            height: 400px;
+            margin-left: 10%;
+            border: 1px solid black;
+        }
+        .mainimg{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+            display: block; 
+
+        }
+        .photopicker{
+            width: 100px;
+            height: 30px;
+            position: absolute;
+            background-color:floralwhite;
+            left: 2%;
+            top:5%;
+        }
+        .photopicker p{
+            font-family:roboto;
+            text-align: center;
+            font-size: 10px;
+            letter-spacing: 1px;
+        }
+        .picfeature{
+            position: absolute;
+            bottom: 5%;
+            left: 2%;
+        }
+        .p1{
+            color:burlywood;
+            letter-spacing: 2px;
+            font-family: roboto;
+            font-size: 15px;
+        }
+        .picfeature h1{
+            color: white;
+            line-height: 10px;
+        }
+        .p2{
+            color: white;
+        }
+
+        .content-container{
+             margin-left: 10%;
+             margin-right: 10%;
+             display: flex;
+             gap: 40px;
+        }
+        .article-container{
+            flex: 3;
+        }
+        .side{
+            flex: 1;
+            display: flex;
+            gap: 25px;
+            flex-direction: column;
+        }
         
-    </body>
+        .below-part h1{
+            margin-top: 10px;
+            margin-bottom: 5px;
+            
+            color: white;
+            font-family: serif;
+            word-spacing: 3px;
+        }
+        .below-part form{
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        .input-email{
+            width: 400px;
+            height: 40px;
+            box-sizing: border-box;
+            border: none;
+        }
+        .email-submit{
+            width: 150px;
+            height: 40px;
+            box-sizing: border-box;
+            background-color: burlywood;
+            color: white;
+            border: none;
+        }
+        footer{
+            height: 30px;
+            background-color: #071E15;
+            color: white;
+            display: flex;
+            padding: 10px;
+            align-items: center;
+        }
+        footer p{
+            margin: 0;
+            padding-left: 10%;
+        }
+        .footer-nav{
+            margin-left: auto;
+            padding-right: 10%;
+        }
+        .footer-nav a{
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+        .footer-nav a:hover{
+            color: coral;
+        }
+        </style>
+</head>
+<body>
+    <p class="top_most">A LITTLE INSPIRATION FOR EVERY DAY <span id="star">&#9733</span></p>
+    <div class="container-1">
+        <div class="theSunday">the sunday<span>.</span></div>
+        <div class="nav home"><a class="home" href="">Home</a></div>
+        <div class="nav journal"><a class="journal" href="">Journal</a></div>
+        <div class="nav about"><a class="about" href="">About</a></div>
+        <div class="nav subscribe"><a class="subscribe" href="">Subscribe</a></div>
+    </div>
+    <hr>
+    <p style="text-align: center; font-size: 10 px;">STORIES WORTH SLOWING DOWN FOR</p>
+    <h1 style="text-align: center; line-height: 10px;">The Sunday Journal</h1>
+    <p style="text-align: center; font-size: 10px;">A thoughtful collection of stories about life, creativity and everything in between.</p>
+    <br>
+
+    <div class="imgpart">
+        <img class="mainimg" src="trees.jpg" alt="">
+        <div class="photopicker">
+            <p>EDITOR'S PICK</p>
+        </div>
+        <div class="picfeature">
+            <p class="p1">NATURE & SLOW LIVING</p>
+            <h1>Finding Beauty in the Quiet Moments</h1>
+            <p class="p2">November 8,2026 &#8226 6 min read</p>
+        </div>
+    </div>
+    <br><br>
+    <!-- content part -->
+    <main>
+        <div class="content-container">
+            <section class="article-container">
+                <h3 style="font-size: 25px; line-height: 10px;">Latest Stories</h3>
+                <article id="article">
+                    <br><br>
+                    <img src="slow-morning.jpg" alt="">
+                    <p class="article-type">LIFESTYLE</p>
+                    <h4>The Art of Slow Mornings</h4>
+                    <p class="content">Discover how a peaceful morning routine can change the way you
+                    experience every single day.</p>
+                    <pre>NOV 5, 2026  &#8226  5 MIN READ</pre>
+                </article>
+                <article id="article">
+                    <br><br>
+                    <img src="myeik-island.jpeg" alt="">
+                    <p class="article-type">TRAVEL</p>
+                    <h4>Places That Make You Feel Alive</h4>
+                    <p class="content">From peaceful lakes to hidden mountain trails, explore places that inspire a sense of wonder.</p>
+                    <pre>NOV 2, 2026  &#8226  7 MIN READ</pre>
+                 </article>
+                <article id="article">
+                    <br><br>
+                    <img src="workspace.jpeg" alt="">
+                    <p class="article-type">CREATIVITY</p>
+                    <h4>Creating Space for New Ideas</h4>
+                    <p class="content">A beautiful workspace is more than decoration. Learn how your surrounding can spark creativity.</p>
+                    <pre>OCT 28, 2026  &#8226  4 MIN READ</pre>
+                </article>
+            </section>
+            <div class="side">
+                <aside class="aside-article">
+                    <h5 id="heading-1">Meet the Writer</h5>
+                    <img src="writer.jpg" alt="">
+                    <h5 id="heading-2">Hello, I'm Emma.</h5>
+                    <p>A writer and creative soul sharing little stories about meaningful living, everyday inspiration and finding joy in simple things.</p>
+                    <a href="">MORE ABOUT ME &#8594</a>  
+                </aside>
+                <aside class="aside-article">
+                    <h5 id="heading-1">Explore Topics</h5>
+                    <ul id="topist-list">
+                        <li>
+                            <span>Lifestyle</span>
+                            <span>12</span>
+                        </li>
+                        <li>
+                            <span>Travel</span>
+                            <span>08</span>
+                        </li>
+                        <li>
+                            <span>Creativity</span>
+                            <span>15</span>
+                        </li>
+                        <li>
+                            <span>Wellness</span>
+                            <span>06</span>
+                        </li>
+                        <li>
+                            <span>Personal Stories</span>
+                            <span>09</span>
+                        </li>
+                    </ul>
+                </aside>
+                <aside class="aside-article">
+                    <h5 id="heading-1">Popular Reads</h5>
+                    <ol id="popular-read-list">
+                        <li>
+                            <p>Little Things That Bring Us Joy</p>
+                            <p>OCT 20, 2026</p>
+                        </li>
+                        <li>
+                            <p>A Weekend Away From Everything</p>
+                            <p>OCT 15, 2026</p>
+                        </li>
+                        <li>
+                            <p>How To Find Your Inspiration</p>
+                            <p>OCT 10, 2026</p>
+                        </li>
+                    </ol>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <div class="below-part">
+        <p id="footer-p1">A LITTLE NOTE FROM ME TO YOU</p>
+        <h1>Let's Stay Inspired.</h1>
+        <p id="footer-p2">Thoughtful stories deliverd straight to your inbox, every Sunday.</p>
+        <form>
+            <input class="input-email" type="email" placeholder=" Enter your email address" required>
+            <button class="email-submit" type="submit">SUBSCRIBE &#8594</button>
+        </form>
+    </div>
+    <footer>
+        <p>&copy 2026 The Sunday Journal. All rights reserved.</p>
+        <nav class="footer-nav">
+            <a href="#">Instagram</a>
+            <a href="#">Pinterest</a>
+            <a href="#">Contact</a>
+        </nav>
+    </footer>
+
+
+
+</body>
 </html>
